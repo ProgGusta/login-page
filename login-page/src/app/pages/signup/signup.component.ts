@@ -44,7 +44,7 @@ export class SignUpComponent {
   }
 
   submit() {
-    this.loginService.login(this.signupForm.value.email, this.signupForm.value.password)
+    this.loginService.signup(this.signupForm.value.name, this.signupForm.value.email, this.signupForm.value.password)
       .subscribe({
         next: () => this.toastService.success("Login bem-sucedido"),
         error: () => this.toastService.error("Erro ao fazer login")
